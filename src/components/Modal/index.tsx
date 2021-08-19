@@ -1,20 +1,26 @@
-import { useContext, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { ModalContext } from '../../contexts/ModalContext'
 import { Container, BoxModal, Counter, Wrapper } from './style'
 
 import { MdClose } from 'react-icons/md'
 
 export const Modal: React.FC = () => {
-  const { title, type, price, closeModal } = useContext(ModalContext)
+  const { title, type, price, closeModal, handlePurchase } = useContext(ModalContext)
 
-  const [quantidade, setQuantidade] = useState(0)
+  const [quantidade, setQuantidade] = useState(1)
+  const [cartPrice, setCartPrice] = useState(1)
+
+  useEffect(() => {
+    setCartPrice(quantidade * price)
+  }, [quantidade])
 
   function plus() {
     setQuantidade(quantidade + 1)
   }
+
   function minus() {
-    if (quantidade <= 0) {
-      setQuantidade(0)
+    if (quantidade <= 1) {
+      setQuantidade(1)
     } else {
       setQuantidade(quantidade - 1)
     }
@@ -30,7 +36,7 @@ export const Modal: React.FC = () => {
         <div className="infoProduct">
           <h2>{title}</h2>
           <p>{type}</p>
-          <span>R$ {price}</span>
+          <span>R$ {cartPrice.toFixed(2)}</span>
           <hr />
           <Wrapper>
             <section>
@@ -51,7 +57,11 @@ export const Modal: React.FC = () => {
                   Adicionar ao carrinho
                 </button>
               ) : (
-                <button type="button" className="addCart">
+                <button
+                  onClick={() => handlePurchase(cartPrice)}
+                  type="button"
+                  className="addCart"
+                >
                   Adicionar ao carrinho
                 </button>
               )}

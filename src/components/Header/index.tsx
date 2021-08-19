@@ -4,8 +4,12 @@ import { FaWhatsapp } from 'react-icons/fa'
 import { AiOutlineShoppingCart } from 'react-icons/ai'
 
 import Link from 'next/link'
+import { useContext } from 'react'
+import { ModalContext } from '../../contexts/ModalContext'
 
 export const Header: React.FC = () => {
+  const { totalPrice } = useContext(ModalContext)
+
   return (
     <Container>
       <HeaderUp>
@@ -35,7 +39,7 @@ export const Header: React.FC = () => {
         <Carrinho>
           <AiOutlineShoppingCart />
           <p>Cesta</p>
-          <span>(25,00)</span>
+          <span>({totalPrice.toFixed(2)})</span>
         </Carrinho>
       </HeaderDown>
     </Container>

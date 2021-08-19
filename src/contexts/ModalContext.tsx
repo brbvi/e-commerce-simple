@@ -5,6 +5,8 @@ interface ModalContextData {
   type: string
   price: number
   isOpen: boolean
+  totalPrice: number
+  handlePurchase: (price: number) => void
   openModal: () => void
   closeModal: () => void
   getInfo: ({ title, type, price }: App.Product) => void
@@ -20,8 +22,18 @@ export function ModalContextProvider({ children }: ModalContextProviderProps) {
   const [title, setTitle] = useState('')
   const [type, setType] = useState('')
   const [price, setPrice] = useState(0)
-
   const [isOpen, setIsOpen] = useState(false)
+  const [totalPrice, setTotalPrice] = useState(0)
+
+  const purchasePrice = []
+
+  function handlePurchase(price: number) {
+    purchasePrice.push(price)
+    purchasePrice.forEach((price) => {
+      setTotalPrice(totalPrice + price)
+    })
+    setIsOpen(false)
+  }
 
   function openModal() {
     setIsOpen(true)
@@ -39,7 +51,17 @@ export function ModalContextProvider({ children }: ModalContextProviderProps) {
 
   return (
     <ModalContext.Provider
-      value={{ title, type, price, isOpen, openModal, closeModal, getInfo }}
+      value={{
+        title,
+        type,
+        price,
+        isOpen,
+        openModal,
+        closeModal,
+        getInfo,
+        handlePurchase,
+        totalPrice
+      }}
     >
       {children}
     </ModalContext.Provider>
