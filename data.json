@@ -1,0 +1,50 @@
+[
+  {
+    "id":1,
+    "title":"produto 1",
+    "type":"tipo 1",
+    "price":15.0
+  },
+  {
+    "id":2,
+    "title":"produto 2",
+    "type":"tipo 2",
+    "price":25.0
+  },
+  {
+    "id":3,
+    "title":"produto 3",
+    "type":"tipo 3",
+    "price":35.0
+  },
+  {
+    "id":4,
+    "title":"produto 4",
+    "type":"tipo 4",
+    "price":45.0
+  },
+  {
+    "id":5,
+    "title":"produto 5",
+    "type":"tipo 5",
+    "price":55.0
+  },
+  {
+    "id":6,
+    "title":"produto 6",
+    "type":"tipo 6",
+    "price":65.0
+  },
+  {
+    "id":7,
+    "title":"produto 7",
+    "type":"tipo 7",
+    "price":75.0
+  },
+  {
+    "id":8,
+    "title":"produto 8",
+    "type":"tipo 8",
+    "price":85.0
+  }
+]
