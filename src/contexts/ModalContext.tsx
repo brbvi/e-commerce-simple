@@ -1,5 +1,7 @@
 import { createContext, ReactNode, useState } from 'react'
 
+import { disableScroll, enableScroll } from '../utils/handleScroll'
+
 interface ModalContextData {
   title: string
   type: string
@@ -37,10 +39,12 @@ export function ModalContextProvider({ children }: ModalContextProviderProps) {
 
   function openModal() {
     setIsOpen(true)
+    disableScroll()
   }
 
   function closeModal() {
     setIsOpen(false)
+    enableScroll()
   }
 
   function getInfo({ title, type, price }: App.Product) {
