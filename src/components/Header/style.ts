@@ -71,14 +71,25 @@ export const HeaderDown = styled.div`
 
 export const Carrinho = styled.div`
   margin-left: auto;
-  color: white;
   border: 1px solid var(--gray-50);
   border-radius: 4px;
-  padding: 0.5rem;
+  width: 120px;
+  height: 35px;
+  padding: 1px;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
 
   p {
     margin: 0 5px;
