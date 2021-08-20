@@ -34,14 +34,6 @@ export const HeaderDown = styled.div`
     border-right: 1px solid var(--gray-200);
   }
 
-  a {
-    font-size: 0.875rem;
-    text-decoration: none;
-    color: var(--gray-50);
-
-    transition: opacity 0.3s;
-  }
-
   .animationBar {
     width: 0%;
     height: 1px;
@@ -54,12 +46,25 @@ export const HeaderDown = styled.div`
   .wrapper {
     margin-right: 3rem;
 
+    a {
+      font-size: 0.875rem;
+      text-decoration: none;
+      color: var(--gray-50);
+
+      transition: opacity 0.3s;
+    }
+
     &:hover .animationBar {
       width: 100%;
     }
 
     &:hover a {
       opacity: 0.6;
+    }
+  }
+  @media (max-width: 1080px) {
+    .wrapper {
+      display: none;
     }
   }
 `
