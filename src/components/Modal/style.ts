@@ -77,6 +77,13 @@ export const BoxModal = styled.div`
       opacity: 0.7;
     }
   }
+
+  @media (max-width: 1080px) {
+    width: 90%;
+    padding: 1rem;
+
+    grid-template-columns: repeat(1, 100%);
+  }
 `
 
 export const Counter = styled.div`
