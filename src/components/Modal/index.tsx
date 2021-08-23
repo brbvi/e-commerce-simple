@@ -27,7 +27,11 @@ export const Modal: React.FC = () => {
   }
 
   return (
-    <Container>
+    <Container
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <BoxModal>
         <div className="imgProduct">
           <img src="/product.jpg" alt="Product" />
