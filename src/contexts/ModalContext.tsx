@@ -34,6 +34,7 @@ export function ModalContextProvider({ children }: ModalContextProviderProps) {
     purchasePrice.forEach((price) => {
       setTotalPrice(totalPrice + price)
     })
+    enableScroll()
     setIsOpen(false)
   }
 
