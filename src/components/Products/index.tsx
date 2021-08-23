@@ -16,11 +16,14 @@ import { Parallax } from 'react-parallax'
 import { AiOutlineShoppingCart } from 'react-icons/ai'
 
 import { useEffect } from 'react'
+import Link from 'next/link'
 
 export const Products: React.FC = () => {
   useEffect(() => {
     return console.log(data)
   }, [])
+
+  const latestProducts = data.slice(0, 8)
 
   const breakPoints = [{ width: 1366, itemsToShow: 1 }]
   return (
@@ -40,7 +43,7 @@ export const Products: React.FC = () => {
         </div>
 
         <Wrapper>
-          {data.map((product) => {
+          {latestProducts.map((product) => {
             return (
               <Product
                 key={product.id}
@@ -58,7 +61,7 @@ export const Products: React.FC = () => {
         </div>
 
         <Wrapper>
-          {data.map((product) => {
+          {latestProducts.map((product) => {
             return (
               <Product
                 key={product.id}
@@ -71,7 +74,10 @@ export const Products: React.FC = () => {
         </Wrapper>
 
         <div className="all">
-          <button type="button">Todos os itens</button>
+          <Link href="/allProducts">
+            <button type="button">Todos os itens</button>
+          </Link>
+
           <div className="lineBackAll" />
         </div>
       </BoxProducts>

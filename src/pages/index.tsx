@@ -5,14 +5,18 @@ import { Modal } from '../components/Modal'
 import { Products } from '../components/Products'
 import { ModalContext } from '../contexts/ModalContext'
 
+import { AnimatePresence } from 'framer-motion'
+import { Footer } from '../components/Footer'
+
 export default function Home() {
   const { isOpen } = useContext(ModalContext)
 
   return (
     <div>
-      {isOpen && <Modal />}
+      <AnimatePresence>{isOpen && <Modal />}</AnimatePresence>
       <Header />
       <Products />
+      <Footer />
     </div>
   )
 }
