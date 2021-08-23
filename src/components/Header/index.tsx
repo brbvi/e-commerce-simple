@@ -17,9 +17,12 @@ export const Header: React.FC = () => {
         <span>+55 11 98765-4321</span>
       </HeaderUp>
       <HeaderDown>
-        <h1>ECOMMERCE</h1>
+        <Link href="/">
+          <h1>ECOMMERCE</h1>
+        </Link>
+
         <div className="wrapper">
-          <Link href="/">
+          <Link href="/allProducts">
             <a>Todos os produtos</a>
           </Link>
           <div className="animationBar" />

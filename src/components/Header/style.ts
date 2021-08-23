@@ -32,6 +32,7 @@ export const HeaderDown = styled.div`
     font-weight: 400;
     color: var(--gray-200);
     border-right: 1px solid var(--gray-200);
+    cursor: pointer;
   }
 
   .animationBar {
