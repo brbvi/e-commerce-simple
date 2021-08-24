@@ -40,7 +40,7 @@ export const Header: React.FC = () => {
           <div className="animationBar" />
         </div>
         <Carrinho>
-          <a href="">
+          <a href="/cart">
             <AiOutlineShoppingCart />
             <p>Cesta</p>
             <span>({totalPrice.toFixed(2)})</span>
