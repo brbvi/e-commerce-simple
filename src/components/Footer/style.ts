@@ -6,6 +6,10 @@ export const Container = styled.div`
   .up {
     display: grid;
     grid-template-columns: repeat(4, 25%);
+
+    @media (max-width: 1080px) {
+      grid-template-columns: repeat(2, 50%);
+    }
   }
 
   .down {
@@ -39,6 +43,26 @@ export const BoxFooter = styled.div`
     color: var(--gray-500);
   }
 
+  span {
+    font-size: 0.7rem;
+    margin-bottom: 13px;
+    cursor: pointer;
+    width: 100%;
+    padding-left: 5px;
+
+    display: inline-block;
+
+    transition: color 0.3s;
+
+    &:hover {
+      color: var(--purple-500);
+    }
+
+    @media (max-width: 1080px) {
+      text-align: center;
+    }
+  }
+
   .lineFooter {
     height: 1px;
     background: var(--gray-500);
@@ -52,7 +76,7 @@ export const BoxFooter = styled.div`
     border: 1px solid var(--gray-500);
   }
   &:hover .lineFooter {
-    width: 100%;
+    width: 90%;
     opacity: 1;
   }
 `

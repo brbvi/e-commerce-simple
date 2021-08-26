@@ -24,14 +24,69 @@ export const Footer: React.FC = () => {
         <BoxFooter>
           <h2>Categorias</h2>
           <div className="lineFooter" />
+
+          <Link href="/">
+            <span>Amendoim</span>
+          </Link>
+          <Link href="/">
+            <span>Amendoim</span>
+          </Link>
+          <Link href="/">
+            <span>Amendoim</span>
+          </Link>
+          <Link href="/">
+            <span>Amendoim</span>
+          </Link>
+          <Link href="/">
+            <span>Amendoim</span>
+          </Link>
+          <Link href="/">
+            <span>Amendoim</span>
+          </Link>
         </BoxFooter>
         <BoxFooter>
           <h2>Informações</h2>
           <div className="lineFooter" />
+          <Link href="/">
+            <span>Amendoim</span>
+          </Link>
+          <Link href="/">
+            <span>Amendoim</span>
+          </Link>
+          <Link href="/">
+            <span>Amendoim</span>
+          </Link>
+          <Link href="/">
+            <span>Amendoim</span>
+          </Link>
+          <Link href="/">
+            <span>Amendoim</span>
+          </Link>
+          <Link href="/">
+            <span>Amendoim</span>
+          </Link>
         </BoxFooter>
         <BoxFooter>
           <h2>Meu Cadastro</h2>
           <div className="lineFooter" />
+          <Link href="/">
+            <span>Amendoim</span>
+          </Link>
+          <Link href="/">
+            <span>Amendoim</span>
+          </Link>
+          <Link href="/">
+            <span>Amendoim</span>
+          </Link>
+          <Link href="/">
+            <span>Amendoim</span>
+          </Link>
+          <Link href="/">
+            <span>Amendoim</span>
+          </Link>
+          <Link href="/">
+            <span>Amendoim</span>
+          </Link>
         </BoxFooter>
       </section>
       <section className="down">

@@ -193,18 +193,19 @@ export const WrapperParallax = styled.div`
     grid-template-columns: repeat(4, 25%);
     margin: 20px 0;
 
+    justify-content: space-between;
+
     div {
+      width: 100%;
       display: flex;
       align-items: center;
-      justify-content: space-around;
-    }
 
-    img {
-      width: 95%;
-      height: 160px;
-      margin-bottom: 10px;
+      img {
+        width: 100%;
+        height: 170px;
+        margin: 2px;
+      }
     }
-
     @media (max-width: 1080px) {
       grid-template-columns: repeat(2, 50%);
     }

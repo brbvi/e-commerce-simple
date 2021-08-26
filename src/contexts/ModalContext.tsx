@@ -8,6 +8,7 @@ interface ModalContextData {
   price: number
   isOpen: boolean
   totalPrice: number
+  purchasePrice: Array<number>
   handlePurchase: (price: number) => void
   openModal: () => void
   closeModal: () => void
@@ -65,7 +66,8 @@ export function ModalContextProvider({ children }: ModalContextProviderProps) {
         closeModal,
         getInfo,
         handlePurchase,
-        totalPrice
+        totalPrice,
+        purchasePrice
       }}
     >
       {children}

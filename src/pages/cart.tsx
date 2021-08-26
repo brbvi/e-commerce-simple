@@ -3,6 +3,9 @@ import { Footer } from '../components/Footer'
 import { Container, LeftCart, RightCart } from '../styles/cart'
 
 import { IoCartOutline } from 'react-icons/io5'
+
+import { BsTrash } from 'react-icons/bs'
+
 export const Cart: React.FC = () => {
   return (
     <>
@@ -15,38 +18,57 @@ export const Cart: React.FC = () => {
           </div>
           <table>
             <thead>
-              <th>title</th>
-              <th>type</th>
-              <th>Quantidade</th>
-              <th>Total</th>
+              <tr>
+                <th>Title</th>
+                <th>type</th>
+                <th>Quantidade</th>
+                <th>Total</th>
+                <th></th>
+              </tr>
             </thead>
             <tr>
               <td>Amendoim torrado com sal</td>
               <td>Amendoins</td>
               <td>5</td>
               <td>45,90</td>
-              <td>lix</td>
+              <td>
+                <button>
+                  <BsTrash />
+                </button>
+              </td>
             </tr>
             <tr>
               <td>Amendoim torrado com sal</td>
               <td>Amendoins</td>
               <td>5</td>
               <td>45,90</td>
-              <td>lix</td>
+              <td>
+                <button>
+                  <BsTrash />
+                </button>
+              </td>
             </tr>
             <tr>
               <td>Amendoim torrado com sal</td>
               <td>Amendoins</td>
               <td>5</td>
               <td>45,90</td>
-              <td>lix</td>
+              <td>
+                <button>
+                  <BsTrash />
+                </button>
+              </td>
             </tr>
             <tr>
               <td>Amendoim torrado com sal</td>
               <td>Amendoins</td>
               <td>5</td>
               <td>45,90</td>
-              <td>lix</td>
+              <td>
+                <button>
+                  <BsTrash />
+                </button>
+              </td>
             </tr>
           </table>
         </LeftCart>

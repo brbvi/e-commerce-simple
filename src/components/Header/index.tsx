@@ -43,7 +43,7 @@ export const Header: React.FC = () => {
           <a href="/cart">
             <AiOutlineShoppingCart />
             <p>Cesta</p>
-            <span>({totalPrice.toFixed(2)})</span>
+            {totalPrice}
           </a>
         </Carrinho>
       </HeaderDown>
