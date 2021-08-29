@@ -3,25 +3,33 @@ import styled from 'styled-components'
 export const Container = styled.div`
   display: grid;
   grid-template-columns: 80% 20%;
-  padding: 2rem 5rem;
+  padding: 5rem 2rem;
+
+  @media (max-width: 1080px) {
+    grid-template-columns: 100%;
+  }
 `
 
 export const LeftCart = styled.div`
-  div {
+  .titleCart {
     display: flex;
     align-items: center;
     margin-bottom: 30px;
+    padding-left: 6rem;
 
     h1 {
       font-weight: 300;
-      font-size: 1.7rem;
+      font-size: 1.9rem;
+      margin-left: 20px;
+    }
+    @media (max-width: 1080px) {
+      padding-left: 0rem;
+      justify-content: center;
     }
   }
 
   table {
     width: 100%;
-
-    margin: 6rem 0rem;
     th,
     td {
       padding: 0.75rem 1rem;
@@ -53,7 +61,38 @@ export const LeftCart = styled.div`
         }
       }
     }
+    @media (max-width: 1080px) {
+      font-size: 75%;
+      margin-bottom: 40px;
+    }
   }
 `
 
-export const RightCart = styled.div``
+export const RightCart = styled.div`
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+
+  h1 {
+    font-weight: 400;
+  }
+
+  p {
+    margin: 10px 0;
+  }
+
+  button {
+    background: var(--purple-500);
+    color: var(--white);
+    font-weight: 700;
+    font-size: 0.875rem;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+`

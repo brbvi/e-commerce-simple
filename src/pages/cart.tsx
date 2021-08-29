@@ -12,10 +12,11 @@ export const Cart: React.FC = () => {
       <Header />
       <Container>
         <LeftCart>
-          <div>
-            <IoCartOutline fontSize="30" />
+          <div className="titleCart">
+            <IoCartOutline fontSize="50" />
             <h1>Carrinho de compras</h1>
           </div>
+
           <table>
             <thead>
               <tr>
@@ -37,42 +38,13 @@ export const Cart: React.FC = () => {
                 </button>
               </td>
             </tr>
-            <tr>
-              <td>Amendoim torrado com sal</td>
-              <td>Amendoins</td>
-              <td>5</td>
-              <td>45,90</td>
-              <td>
-                <button>
-                  <BsTrash />
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td>Amendoim torrado com sal</td>
-              <td>Amendoins</td>
-              <td>5</td>
-              <td>45,90</td>
-              <td>
-                <button>
-                  <BsTrash />
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td>Amendoim torrado com sal</td>
-              <td>Amendoins</td>
-              <td>5</td>
-              <td>45,90</td>
-              <td>
-                <button>
-                  <BsTrash />
-                </button>
-              </td>
-            </tr>
           </table>
         </LeftCart>
-        <RightCart></RightCart>
+        <RightCart>
+          <h1>Total compra</h1>
+          <p>R$ 250,00</p>
+          <button>Finalizar compra</button>
+        </RightCart>
       </Container>
       <Footer />
     </>
